@@ -1,16 +1,16 @@
-import { FreeCamera } from "@babylonjs/core/Cameras/freeCamera";
-import { Engine } from "@babylonjs/core/Engines/engine";
-import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
-import { Vector3 } from "@babylonjs/core/Maths/math.vector";
-import { CreateGround } from "@babylonjs/core/Meshes/Builders/groundBuilder";
-import { CreateSphere } from "@babylonjs/core/Meshes/Builders/sphereBuilder";
-import { CreateBox } from "@babylonjs/core/Meshes/Builders/boxBuilder";
-import { Scene } from "@babylonjs/core/scene";
+import { FreeCamera } from '@babylonjs/core/Cameras/freeCamera';
+import { Engine } from '@babylonjs/core/Engines/engine';
+import { HemisphericLight } from '@babylonjs/core/Lights/hemisphericLight';
+import { Vector3 } from '@babylonjs/core/Maths/math.vector';
+import { CreateBox } from '@babylonjs/core/Meshes/Builders/boxBuilder';
+import { CreateGround } from '@babylonjs/core/Meshes/Builders/groundBuilder';
+import { CreateSphere } from '@babylonjs/core/Meshes/Builders/sphereBuilder';
+import { Scene } from '@babylonjs/core/scene';
 
-import { GridMaterial } from "@babylonjs/materials/grid/gridMaterial";
+import { GridMaterial } from '@babylonjs/materials/grid/gridMaterial';
 
 // Get the canvas element from the DOM.
-const canvas = document.getElementById("renderCanvas");
+const canvas = document.getElementById("renderCanvas") as HTMLCanvasElement;
 
 // Associate a Babylon Engine to it.
 const engine = new Engine(canvas);
@@ -37,12 +37,7 @@ light.intensity = 0.7;
 var material = new GridMaterial("grid", scene);
 
 // Our built-in 'sphere' shape.
-var sphere = CreateSphere("sphere1", { segments: 16, diameter: 2 }, scene);
-
-// Create a box
-var box = CreateBox("box1", { size: 1 }, scene)
-box.material = material;
-box.position.x = 2;
+var sphere = CreateSphere('sphere1', { segments: 16, diameter: 2 }, scene);
 
 // Move the sphere upward 1/2 its height
 sphere.position.y = 2;
@@ -50,8 +45,13 @@ sphere.position.y = 2;
 // Affect a material
 sphere.material = material;
 
+// Create a box
+var box = CreateBox("box1", { size: 1 }, scene)
+box.material = material;
+box.position.x = 2;
+
 // Our built-in 'ground' shape.
-var ground = CreateGround("ground1", { width: 6, height: 6, subdivisions: 2 }, scene);
+var ground = CreateGround('ground1', { width: 6, height: 6, subdivisions: 2 }, scene);
 
 // Affect a material
 ground.material = material;
