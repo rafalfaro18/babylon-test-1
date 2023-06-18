@@ -28,4 +28,3 @@
     "url": "https://github.com/rafalfaro18/babylon-test-1.git"
   }
 }
-npx gh-pages -d public -s dist/* public/*
