@@ -1,6 +1,6 @@
 {
   "name": "babylon-test-1",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "devDependencies": {
     "@babylonjs/inspector": "^6.8.0",
     "@babylonjs/materials": "^6.8.0",
+    "earcut": "^2.2.4",
     "gh-pages": "^5.0.0",
     "ts-loader": "^9.4.3",
     "typescript": "^5.1.3",

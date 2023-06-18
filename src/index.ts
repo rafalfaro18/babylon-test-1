@@ -5,9 +5,12 @@ import { Vector3 } from '@babylonjs/core/Maths/math.vector';
 import { CreateBox } from '@babylonjs/core/Meshes/Builders/boxBuilder';
 import { CreateGround } from '@babylonjs/core/Meshes/Builders/groundBuilder';
 import { CreateSphere } from '@babylonjs/core/Meshes/Builders/sphereBuilder';
+import { CreateText } from '@babylonjs/core/Meshes/Builders/textBuilder';
 import { Scene } from '@babylonjs/core/scene';
 
 import { GridMaterial } from '@babylonjs/materials/grid/gridMaterial';
+
+import * as earcut from "earcut"
 
 //import "@babylonjs/core/Debug/debugLayer"; // Augments the scene with the debug methods
 //import "@babylonjs/inspector"; // Injects a local ES6 version of the inspector to prevent automatically relying on the none compatible version
@@ -56,6 +59,16 @@ box.material = material;
 box.position.x = -2;
 box.position.y = 1;
 box.position.z = -2;
+
+const fontData = await (await fetch("./fonts/Roboto_Regular.json")).json();
+
+var title = CreateText("title", "Rafael Alfaro - Resume", fontData, {
+  size: 1,
+  resolution: 64,
+  depth: 0.5
+}, scene, earcut)
+
+title.material = material
 
 // Our built-in 'ground' shape.
 var ground = CreateGround('ground1', { width: 6, height: 6, subdivisions: 2 }, scene);
