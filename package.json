@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pre-deploy": "cp dist/main.js public/",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "author": "",
   "license": "ISC",
