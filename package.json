@@ -11,6 +11,7 @@
   "devDependencies": {
     "@babylonjs/inspector": "^6.8.0",
     "@babylonjs/materials": "^6.8.0",
+    "gh-pages": "^5.0.0",
     "ts-loader": "^9.4.3",
     "typescript": "^5.1.3",
     "webpack": "^5.87.0",
@@ -19,5 +20,10 @@
   },
   "dependencies": {
     "@babylonjs/core": "^6.8.0"
+  },
+  "homepage": "https://rafalfaro18.github.io/babylon-test-1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafalfaro18/babylon-test-1.git"
   }
 }
