@@ -4,6 +4,7 @@ import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
 import { Vector3 } from "@babylonjs/core/Maths/math.vector";
 import { CreateGround } from "@babylonjs/core/Meshes/Builders/groundBuilder";
 import { CreateSphere } from "@babylonjs/core/Meshes/Builders/sphereBuilder";
+import { CreateBox } from "@babylonjs/core/Meshes/Builders/boxBuilder";
 import { Scene } from "@babylonjs/core/scene";
 
 import { GridMaterial } from "@babylonjs/materials/grid/gridMaterial";
@@ -37,6 +38,11 @@ var material = new GridMaterial("grid", scene);
 
 // Our built-in 'sphere' shape.
 var sphere = CreateSphere("sphere1", { segments: 16, diameter: 2 }, scene);
+
+// Create a box
+var box = CreateBox("box1", { size: 1 }, scene)
+box.material = material;
+box.position.x = 2;
 
 // Move the sphere upward 1/2 its height
 sphere.position.y = 2;
