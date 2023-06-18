@@ -46,7 +46,7 @@ sphere.position.y = 2;
 sphere.material = material;
 
 // Create a box
-var box = CreateBox("box1", { size: 1 }, scene)
+var box = CreateBox("box1", { size: 2 }, scene)
 box.material = material;
 box.position.x = 2;
 
