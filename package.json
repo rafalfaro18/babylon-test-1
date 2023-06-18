@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babylonjs/inspector": "^6.8.0",
     "@babylonjs/materials": "^6.8.0",
     "ts-loader": "^9.4.3",
     "typescript": "^5.1.3",
