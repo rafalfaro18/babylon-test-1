@@ -53,8 +53,9 @@ sphere.material = material;
 // Create a box
 var box = CreateBox("box1", { size: 2 }, scene)
 box.material = material;
-box.position.x = 2;
+box.position.x = -2;
 box.position.y = 1;
+box.position.z = -2;
 
 // Our built-in 'ground' shape.
 var ground = CreateGround('ground1', { width: 6, height: 6, subdivisions: 2 }, scene);
