@@ -1,11 +1,12 @@
 {
   "name": "babylon-test-1",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
     "predeploy": "copy dist\\main.js public",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public",
+    "postdeploy": "del public\\main.js"
   },
   "author": "",
   "license": "ISC",
